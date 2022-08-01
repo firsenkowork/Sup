@@ -1,0 +1,100 @@
+.info
+  background-image: url(../img/info-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  position: relative
+  margin-top: 100px
+
+// Черная полоса между елками
+.info::before
+  content: ""
+  position: absolute
+  height: 120px
+  background-color: $Dark
+  top: 0
+  left: 0
+  right: 0
+  transform: translateY(-100px)
+  z-index: 1
+
+
+.info__top
+  display: flex
+  gap: 80px
+  padding-top: 150px
+  margin-bottom: 85vh
+ 
+.info__top-text
+  padding-top: 245px
+  width: 290px
+  color: $White
+  position: relative
+
+
+
+.info__top-text--one
+  padding-bottom: 125px
+.info__top-text--two
+  border-bottom: 1px solid $White
+
+
+
+.info__top-img
+  position: relative
+  z-index: 6
+
+.popup-btn
+  text-align: center
+  border: none
+  cursor: pointer
+  background-color: transparent
+  position: absolute
+  
+.popup-btn span
+  padding-top: 12px
+  display: block
+  color: $White
+  transition: color .3s
+
+
+.popup-btn:hover path,
+.popup-btn:hover circle
+  transition: all .3s         // transition отвечает за плавность
+.popup-btn:hover path
+  fill: $Green                // fill отвечает за цвет
+.popup-btn:hover circle
+  stroke: $Green              // Stroke отвечает за цвет
+.popup-btn:hover span
+  color: $Sky                 // Color отвечает за цвет
+
+
+.info__btn
+  bottom: 0
+  right: 0
+
+.info__specs
+  display: flex
+  align-items: center
+  gap: 130px
+  color: $White
+  padding-bottom: 50px
+  
+.info__specs-title
+  width: 250px
+
+.info__specs-list
+  border-top: 1px solid $White
+  border-bottom: 1px solid $White
+  padding: 30px 0
+  width: 565px
+  font-weight: 700
+.info__specs-item
+  margin-bottom: 15px
+  display: flex
+  gap: 25px
+
+.info__specs-captions
+  width: 185px
+
+  

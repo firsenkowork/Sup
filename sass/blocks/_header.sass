@@ -1,0 +1,128 @@
+.header
+  background-image: url(../img/header-bg.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  min-height: 100vh  // что бы занимала всю высоту экрана 
+  background-position:  center
+  position: relative
+  &__top
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    padding: 57px 0
+    gap: 100px    // равное расстояние мжду эллементами
+    font-family: 'Comfortaa', cursive
+    font-weight: 700
+    font-size: 20px
+    line-height: 22px
+  &__btn
+    text-transform: uppercase
+    color: $White
+    padding: 12px 71px
+    background-color: $Dark
+    border: none
+    cursor: pointer
+// Добавляем переход Елки сверху
+.header::before
+  content: ""
+  position: absolute
+  background-image: url(../img/header-decor.svg)
+  transform: translateY(50%)
+  bottom: 0
+  left: 0
+  right: 0
+  height: 456px
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  z-index: 2
+// Добавляем переход Елки снизу
+.header::after
+  content: ""
+  position: absolute
+  background-image: url(../img/header-decor.svg)
+  transform: translateY(85%) rotate(180deg)
+  bottom: 0
+  left: 0
+  right: 0
+  height: 456px
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  z-index: 3
+
+// Изминения при наведений
+.logo path
+   transition: fill .3s ease
+.logo:hover path
+  fill: #0093A1
+  transition: fill .3s ease
+ 
+.header__content
+  min-height: calc(100vh - 161px) // высоту верхней шапки
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  position: relative
+  
+.header__content-box
+  max-width: 550px
+  text-align: center
+  margin-right: 30px
+  font-family: 'Comfortaa', cursive
+  font-weight: 700
+  color: $White
+
+
+.header__title
+  text-transform: uppercase
+  font-size: 64px
+  line-height: 71px
+  margin: 0
+  margin-bottom: 20px
+
+.header__text
+  font-size: 24px
+  line-height: 27px
+  margin: 0
+  margin-bottom: 20px
+
+
+
+
+
+.header__decor-text
+  position: absolute
+  bottom: 0px
+  color: $Sky
+
+.header__decor-text--one
+  z-index: 1   // Чтобы прятался за елками
+  right: 145px
+  margin: 0
+  bottom: 50px
+
+.header__decor-text--one,
+.header__decor-text--two
+  font-family: 'Comfortaa', cursive
+  font-size: 130px
+  line-height: 145px
+  opacity: 0.3
+
+.header__decor-text--two
+  z-index: 4
+  margin: 0
+  right: 580px
+
+.header__decor-text--three
+  max-width: 360px
+  right: 145px
+  z-index: 4
+  font-weight: 300
+  font-size: 32px
+  line-height: 39px
+  font-style: italic
+  text-align: center
+  margin: 0
+
+
